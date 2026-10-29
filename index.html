@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кафе Аль-Барака, Екатеринбург</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', Arial, sans-serif; color: #2f2a1f; background: #f7f3e8; line-height: 1.7; }
+
+    /* Шапка с большим фото */
+    header {
+      min-height: 90vh;
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; color: #fff; padding: 40px 20px;
+      background:
+        linear-gradient(rgba(20,60,40,0.65), rgba(20,60,40,0.65)),
+        url('hero.jpg') center/cover no-repeat,
+        linear-gradient(135deg, #1f5a3d, #2f7a52);
+    }
+    header h1 { font-family: 'Playfair Display', Georgia, serif; font-size: 3.6rem; margin-bottom: 14px; }
+    header p { font-size: 1.3rem; max-width: 600px; }
+    .btn { display: inline-block; margin-top: 30px; padding: 14px 36px; background: #e0b04a; color: #2f2a1f; text-decoration: none; font-weight: 600; border-radius: 40px; transition: transform .2s, background .2s; }
+    .btn:hover { transform: translateY(-3px); background: #f0c566; }
+
+    section { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+    h2 { font-family: 'Playfair Display', Georgia, serif; text-align: center; margin-bottom: 36px; color: #1f5a3d; font-size: 2.3rem; }
+
+    /* Карточки блюд */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .card { background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.08); transition: transform .25s, box-shadow .25s; }
+    .card:hover { transform: translateY(-6px); box-shadow: 0 12px 26px rgba(0,0,0,0.14); }
+    .photo { height: 190px; background-size: cover; background-position: center; background-color: #2f7a52; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.85); font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; }
+    .photo.lagman { background-image: url('lagman.jpg'); }
+    .photo.plov   { background-image: url('plov.jpg'); background-color: #b07a1c; }
+    .photo.kebab  { background-image: url('kebab.jpg'); background-color: #8a4b2a; }
+    .photo.samsa  { background-image: url('samsa.jpg'); background-color: #c9953a; }
+    .photo.manty  { background-image: url('manty.jpg'); background-color: #4a6b3a; }
+    .info { padding: 20px; }
+    .info h3 { color: #1f5a3d; margin-bottom: 6px; font-size: 1.3rem; }
+    .info p { font-size: 0.95rem; color: #5a5442; }
+    .price { display: block; margin-top: 12px; font-weight: 600; font-size: 1.25rem; color: #b07a1c; }
+
+    .about { text-align: center; max-width: 700px; }
+
+    /* Контакты и карта */
+    .contacts-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: start; }
+    .contacts-text p { font-size: 1.1rem; margin-bottom: 10px; }
+    iframe { width: 100%; height: 320px; border: 0; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+
+    footer { background: #1b3d2c; color: #fff; text-align: center; padding: 30px 20px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Кафе «Аль-Барака»</h1>
+    <p>Домашняя узбекская кухня в самом сердце Екатеринбурга</p>
+    <a class="btn" href="tel:+79944092543">Позвонить: +7 994 409-25-43</a>
+  </header>
+
+  <section id="menu">
+    <h2>Наше меню</h2>
+    <div class="cards">
+      <div class="card"><div class="photo lagman">Лагман</div><div class="info"><h3>Лагман</h3><p>Домашняя лапша, мясо, свежие овощи, насыщенный бульон.</p><span class="price">390 ₽</span></div></div>
+      <div class="card"><div class="photo plov">Плов</div><div class="info"><h3>Плов</h3><p>Рассыпчатый рис, баранина, морковь и ароматные специи.</p><span class="price">420 ₽</span></div></div>
+      <div class="card"><div class="photo kebab">Казан-кебаб</div><div class="info"><h3>Казан-кебаб</h3><p>Жареное мясо с картофелем, приготовленное в казане.</p><span class="price">520 ₽</span></div></div>
+      <div class="card"><div class="photo samsa">Самса</div><div class="info"><h3>Самса</h3><p>Хрустящая слоёная самса с мясом, из тандыра.</p><span class="price">150 ₽</span></div></div>
+      <div class="card"><div class="photo manty">Манты</div><div class="info"><h3>Манты</h3><p>Сочные манты с говядиной и луком, 5 штук.</p><span class="price">350 ₽</span></div></div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>О нас</h2>
+    <p>Мы готовим всё свежим каждый день. Приходите с семьёй и друзьями: у нас тепло, уютно и всегда вкусно.</p>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <div class="contacts-wrap">
+      <div class="contacts-text">
+        <p><strong>Адрес:</strong> Екатеринбург, ул. Минометчиков, 21</p>
+        <p><strong>Телефон:</strong> +7 994 409-25-43</p>
+        <p><strong>Часы работы:</strong> ежедневно с 09:00 до 22:00</p>
+      </div>
+      <iframe src="https://www.google.com/maps?q=%D0%95%D0%BA%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B1%D1%83%D1%80%D0%B3,+%D0%9C%D0%B8%D0%BD%D0%BE%D0%BC%D0%B5%D1%82%D1%87%D0%B8%D0%BA%D0%BE%D0%B2+21&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Кафе «Аль-Барака»</p>
+  </footer>
+
+</body>
+</html>
